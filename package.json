@@ -3,10 +3,7 @@
   "version": "1.0.1",
   "description": "Custom Node.js cartridge for OpenShift - sample application",
   "private": true,
-  "main": "start.js",
-  "scripts_ori": {
-     "start": "node --use_strict start.js"
-  },
+  "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
