@@ -4,9 +4,22 @@
   "description": "Custom Node.js cartridge for OpenShift - sample application",
   "private": true,
   "main": "start.js",
-  "scripts": {
-    "start": "node --use_strict start.js"
+  "scripts_ori": {
+     "start": "node --use_strict start.js"
   },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=4.3"
+  },
+  "dependencies": {
+    "express": "~4.11.x",
+    "kerberos": "~0.0.x",
+    "parse": "~1.8.0",
+    "parse-server": "~2.2.12"
+  },
+  
   "author": "Ionut-Cristian Florescu <ionut.florescu@gmail.com>",
   "license": "ISC"
 }
