@@ -1,7 +1,7 @@
 {
-  "name": "openshift-cartridge-nodejs-template",
+  "name": "ftg-parse-backend",
   "version": "1.0.1",
-  "description": "Custom Node.js cartridge for OpenShift - sample application",
+  "description": "Parse backend intended to host Fill-the-Gap style exercises",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,6 @@
     "parse-server": "~2.2.12"
   },
   
-  "author": "Ionut-Cristian Florescu <ionut.florescu@gmail.com>",
+  "author": "fushimisi",
   "license": "ISC"
 }
