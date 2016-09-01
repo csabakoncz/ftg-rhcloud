@@ -10,6 +10,9 @@ var databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI||process.e
 if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
 }
+else{
+    console.log('using Mongo uri=%s', databaseUri);
+}
 
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
@@ -50,8 +53,12 @@ app.get('/health', function(req,res){
 });
 
 var port = process.env.NODE_PORT || 1337;
+var host = process.env.NODE_IP || 'localhost';
+
+console.log('launching parse-server on %s:%s', host, port);
+
 var httpServer = require('http').createServer(app);
-httpServer.listen(port, function() {
+httpServer.listen(port, host, function() {
     console.log('parse-server-example running on port ' + port + '.');
 });
 
